@@ -2,14 +2,14 @@
 "use client";
 
 import { manufacturers } from '@/constants';
-import { searchManufacturerProps } from '@/types';
+import { SearchManufacturerProps } from '@/types';
 import { Combobox, Transition } from '@headlessui/react';
 
 import Image from 'next/image';
 import { Fragment, useState } from 'react';
 
 
-function SearchManufacturer({ manufacturer, setManufacturer }: searchManufacturerProps) {
+function SearchManufacturer({ manufacturer, setManufacturer }: SearchManufacturerProps) {
   const [query, setQuery] = useState('');
 
   const filteredManufacturers = query === '' ?
