@@ -4,6 +4,7 @@ import { CarDetailsProps } from '@/types';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import Image from 'next/image';
+import { generateCarImageUrl } from '@/utils';
 
 const CarDetails = ({ car, isOpen, closeModal }: CarDetailsProps) => {
   return (
@@ -59,7 +60,7 @@ const CarDetails = ({ car, isOpen, closeModal }: CarDetailsProps) => {
                       <Image
                         fill
                         priority
-                        src="/hero.png"
+                        src={generateCarImageUrl(car)}
                         alt="car model"
                         className="object-contain"
                       />
@@ -72,7 +73,7 @@ const CarDetails = ({ car, isOpen, closeModal }: CarDetailsProps) => {
                         <Image
                           fill
                           priority
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '29')}
                           alt="car model"
                           className="object-contain"
                         />
@@ -84,7 +85,7 @@ const CarDetails = ({ car, isOpen, closeModal }: CarDetailsProps) => {
                         <Image
                           fill
                           priority
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '33')}
                           alt="car model"
                           className="object-contain"
                         />
@@ -96,7 +97,7 @@ const CarDetails = ({ car, isOpen, closeModal }: CarDetailsProps) => {
                         <Image
                           fill
                           priority
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, '13')}
                           alt="car model"
                           className="object-contain"
                         />
